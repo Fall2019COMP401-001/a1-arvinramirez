@@ -43,10 +43,12 @@ public class A1Jedi {
 				String foodName = scan.next();
 				
 				for(Food food: grocery) {
-					if(food.name.equals(foodName) && !addedItems.contains(food.name)) {
+					if(food.name.equals(foodName)) {
+						if(!addedItems.contains(food.name)) {
+							food.count +=1;	
+							addedItems.add(food.name);
+						}
 						food.quantity += quantityCount;
-						food.count +=1;	
-						addedItems.add(food.name);
 					}
 				}
 			}
