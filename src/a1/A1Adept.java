@@ -105,9 +105,9 @@ public class A1Adept {
 		
 		double average = totalValue / totalCustomer;
 
-		System.out.println("Biggest: " + (biggestSpender.fullName) + " (" +biggestSpender.totalSpent + ")");
-		System.out.println("Smallest: " + (smallestSpender.fullName) + " (" + smallestSpender.totalSpent + ")");
-		System.out.println("Average: " + (average));
+		System.out.println("Biggest: " + (biggestSpender.fullName) + " (" +String.format("%.2f", biggestSpender.totalSpent) + ")");
+		System.out.println("Smallest: " + (smallestSpender.fullName) + " (" + String.format("%.2f", smallestSpender.totalSpent) + ")");
+		System.out.println("Average: " + String.format("%.2f", average));
 	}
 }
 

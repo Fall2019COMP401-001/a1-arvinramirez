@@ -26,7 +26,7 @@ public class A1Novice {
 				double value = scan.nextDouble();
 				totalPrice += itemQuantity * value;
 			}
-			System.out.println(firstLetter + " " + lastName + ": " + totalPrice);
+			System.out.println(firstLetter + " " + lastName + ": " + String.format("%.2f", totalPrice));
 		}
 		
 		// Your code follows here.

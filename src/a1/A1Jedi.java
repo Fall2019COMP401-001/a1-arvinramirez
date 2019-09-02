@@ -37,16 +37,16 @@ public class A1Jedi {
 			
 			int totalItems = scan.nextInt();
 			
+			ArrayList<String> addedItems = new ArrayList<String>();
 			for(int j=0; j<totalItems; j++) {
 				int quantityCount = scan.nextInt();
 				String foodName = scan.next();
 				
-				
 				for(Food food: grocery) {
-					if(food.name.equals(foodName)) {
+					if(food.name.equals(foodName) && !addedItems.contains(food.name)) {
 						food.quantity += quantityCount;
-						food.count +=1;
-						
+						food.count +=1;	
+						addedItems.add(food.name);
 					}
 				}
 			}
